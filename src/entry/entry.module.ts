@@ -6,6 +6,6 @@ import { FormsModule }   from '@angular/forms';
 @NgModule({
     imports:      [ BrowserModule, FormsModule],
     declarations: [ EntryComponent],
-    bootstrap:    [ EntryComponent ]
+    exports:    [ EntryComponent ]
 })
 export class EntryModule { }
