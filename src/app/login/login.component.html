@@ -1,0 +1,13 @@
+<div class="form">
+    <div class="group-form">
+        <label>Логин:</label>
+        <input class="login" type="text" [(ngModel)]="login" placeholder="login">
+    </div>
+    <div class="group-form">
+        <label>Пароль:</label>
+        <input class="password" type="password" [(ngModel)]="password" placeholder="password">
+    </div>
+    <div class="group-form">
+        <button class="btn" (click)="send()">Авторизоваться</button>
+    </div>
+</div>
