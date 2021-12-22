@@ -2,12 +2,15 @@
     <div class="group-form">
         <label>Логин:</label>
         <input class="login" type="text" [(ngModel)]="login" placeholder="login">
+        <div [hidden]="isHiddenEmptyLogin">Не указано имя</div>
     </div>
     <div class="group-form">
         <label>Пароль:</label>
         <input class="password" type="password" [(ngModel)]="password" placeholder="password">
+        <div [hidden]="isHiddenEmptyPassword">Не указан пароль</div>
     </div>
     <div class="group-form">
         <button class="btn" (click)="send()">Авторизоваться</button>
+        <div [hidden]="isHiddenError">Не верно указан логин или пароль</div>
     </div>
 </div>

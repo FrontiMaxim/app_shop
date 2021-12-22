@@ -7,6 +7,7 @@ export class CatalogGuard implements CanActivate {
 
     // пропуск по ссылке, если у пользователя есть id в бд
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) : boolean {
-        return route.queryParams['id'] != -1 ? true : false;
+
+        return route.queryParams['id'] != undefined ? true : false;
     }
 }

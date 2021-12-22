@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 export class HttpService {
     constructor(private http:HttpClient) { }
 
-    // метод для авторизации (при удачной авторизации возвращается id пользователя)
-    authorization(login:string, password:string):Observable<any> {
+    // метод для авторизации (при удачной авторизации возвращается объект пользователя, у которого извлекается id)
+    authorization(login:string, password:string, url:string):Observable<any> {
 
         const params = new HttpParams().set('login', login).set('password', password);
+        console.log(params);
 
-        return this.http.get('url', {params});
+        return this.http.get<Observable<any>>(url, {params});
     }
 }
